@@ -1,0 +1,298 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-size: 16px;
+  background: #f9f9f9;
+}
+body .wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 40px 56px 0;
+}
+@media screen and (max-width: 1024px) {
+  body .wrapper {
+    margin: 40px 0 0 0;
+  }
+}
+body .wrapper .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 40px;
+  left: 56px;
+  max-width: 92.22%;
+  width: 100%;
+  z-index: 22;
+  background: #f9f9f9;
+}
+body .wrapper .header__logo {
+  display: flex;
+}
+body .wrapper .header__logo > div {
+  flex: 0 0 68px;
+  display: flex;
+  align-items: center;
+}
+body .wrapper .header__logo > div img {
+  max-width: 100%;
+  width: 100%;
+  height: 41px;
+}
+body .wrapper .header__logo h1 {
+  color: #303031;
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 500;
+  padding-left: 8px;
+  letter-spacing: -2px;
+  word-spacing: -5px;
+}
+body .wrapper .header__nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+}
+body .wrapper .header__nav ul li {
+  display: inline-block;
+}
+body .wrapper .header__nav ul li:last-of-type > a {
+  color: #71a894;
+  padding: 0;
+}
+body .wrapper .header__nav ul li .header__link {
+  display: inline-block;
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -2px;
+  word-spacing: -5px;
+  color: #303031;
+  line-height: 24px;
+  padding: 0 40px 0 0;
+  text-decoration: none;
+}
+body .wrapper .main {
+  flex: 1 1 auto;
+  margin: 107px 10px 0;
+}
+body .wrapper .main .intro {
+  height: 900px;
+  margin-bottom: 9.375rem;
+}
+@media all and (max-width: 1024px) {
+  body .wrapper .main .intro {
+    height: auto;
+  }
+}
+body .wrapper .main .section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+@media all and (max-width: 1024px) {
+  body .wrapper .main .section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+body .wrapper .main .section__item {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 1024px) {
+  body .wrapper .main .section__item {
+    width: 100%;
+  }
+}
+body .wrapper .main .section__item:first-of-type {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15%;
+  z-index: 3;
+}
+@media all and (max-width: 1024px) {
+  body .wrapper .main .section__item:first-of-type {
+    align-items: center;
+    margin-bottom: 100px;
+  }
+}
+body .wrapper .main .section__item:first-of-type h1 {
+  font-size: calc(32px + 32 * ((100vw - 320px) / 1120));
+  font-style: normal;
+  font-weight: 400;
+  line-height: 4rem;
+  font-family: "Hastag Free Trial", sans-serif;
+  color: #303031;
+  margin-bottom: 24px;
+}
+body .wrapper .main .section__item:first-of-type p {
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: calc(16px + 8 * ((100vw - 320px) / 1120));
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.48px;
+  margin-bottom: 40px;
+}
+body .wrapper .main .section__item:first-of-type button {
+  max-width: 219px;
+  width: 100%;
+  padding: 20px 24px;
+  background: #71a894;
+  border-radius: 8px;
+  color: #f9f9f9;
+  border: none;
+  transition: all 1s ease-in-out 0.1s;
+}
+body .wrapper .main .section__item:first-of-type button:hover {
+  cursor: pointer;
+  background: #303031;
+  transition: all 1s ease 0.1s;
+  box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.5);
+}
+body .wrapper .main .section__item:last-of-type {
+  position: relative;
+}
+@media all and (max-width: 1325px) {
+  body .wrapper .main .section__item:last-of-type {
+    transform: scale(0.8);
+  }
+}
+@media all and (max-width: 1024px) {
+  body .wrapper .main .section__item:last-of-type {
+    transform: scale(1);
+  }
+}
+body .wrapper .main .section__item:last-of-type .big-illustration {
+  position: absolute;
+  right: -10%;
+  top: 15%;
+  z-index: 2;
+}
+@media all and (max-width: 1325px) {
+  body .wrapper .main .section__item:last-of-type .big-illustration {
+    right: -30%;
+  }
+}
+@media all and (max-width: 1024px) {
+  body .wrapper .main .section__item:last-of-type .big-illustration {
+    right: 0;
+    max-width: 100%;
+  }
+}
+body .wrapper .main .section__item:last-of-type .blob {
+  position: relative;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+}
+body .wrapper .main .advantages {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+body .wrapper .main .advantages__header {
+  text-align: center;
+  color: #303031;
+  padding: 0 10px 3rem;
+}
+body .wrapper .main .advantages__header h2 {
+  font-family: "Hastag Free Trial", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 4rem;
+  margin-bottom: 1.5rem;
+}
+body .wrapper .main .advantages__header p {
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.36px;
+  line-height: 26px;
+  margin: 0 auto;
+  width: 80%;
+  word-spacing: -5px;
+}
+@media all and (max-width: 767px) {
+  body .wrapper .main .advantages__header p {
+    width: 100%;
+  }
+}
+body .wrapper .main .advantages__content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media all and (max-width: 1024px) {
+  body .wrapper .main .advantages__content {
+    justify-content: center;
+    gap: 21px;
+  }
+}
+body .wrapper .main .advantages__content .card-about {
+  flex: 0 0 32.15%;
+  height: 340px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  background: #FFF;
+  display: flex;
+  align-items: center;
+}
+@media all and (max-width: 1024px) {
+  body .wrapper .main .advantages__content .card-about {
+    flex: 0 0 45%;
+  }
+}
+@media all and (max-width: 767px) {
+  body .wrapper .main .advantages__content .card-about {
+    flex: 0 0 90%;
+  }
+}
+body .wrapper .main .advantages__content .card-about__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding: 0 10px;
+}
+body .wrapper .main .advantages__content .card-about__content img {
+  margin-bottom: 1.5rem;
+}
+@media all and (max-width: 425px) {
+  body .wrapper .main .advantages__content .card-about__content img {
+    width: 30%;
+  }
+}
+body .wrapper .main .advantages__content .card-about__content h3 {
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 1rem;
+}
+body .wrapper .main .advantages__content .card-about__content p {
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}/*# sourceMappingURL=style.css.map */

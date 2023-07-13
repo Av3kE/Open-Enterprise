@@ -1,0 +1,335 @@
+$maxWidth: 1440;
+$mainColor: #303031;
+$backgroundColor: #f9f9f9;
+$greenColor: #71a894;
+$cardsBackground: #FFF;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-size: 16px;
+  background: $backgroundColor;
+
+  .wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    // overflow: hidden;
+    margin: 40px 56px 0;
+
+    // @media screen and (max-width: 767px) {
+    //   margin: 40px 0 0 0;
+    // }
+
+    @media screen and (max-width: 1024px) {
+      margin: 40px 0 0 0;
+    }
+
+    .header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 40px;
+      left: 56px;
+      max-width: 92.22%;
+      width: 100%;
+      z-index: 22;
+      background: $backgroundColor;
+
+      &__logo {
+        display: flex;
+
+        &>div {
+          flex: 0 0 68px;
+          display: flex;
+          align-items: center;
+
+          img {
+            max-width: 100%;
+            width: 100%;
+            height: 41px;
+          }
+        }
+
+        h1 {
+          color: $mainColor;
+          font-family: "Apercu Mono Pro", sans-serif;
+          font-size: 32px;
+          font-style: normal;
+          line-height: normal;
+          font-weight: 500;
+          padding-left: 8px;
+          letter-spacing: -2px;
+          word-spacing: -5px;
+        }
+      }
+
+      &__nav {
+        ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          height: inherit;
+
+          li {
+            display: inline-block;
+
+            &:last-of-type>a {
+              color: $greenColor;
+              padding: 0;
+            }
+
+            .header__link {
+              display: inline-block;
+              font-family: "Apercu Mono Pro", sans-serif;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 500;
+              letter-spacing: -2px;
+              word-spacing: -5px;
+              color: $mainColor;
+              line-height: 24px;
+              padding: 0 40px 0 0;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    .main {
+      flex: 1 1 auto;
+      margin: 107px 10px 0;
+
+      .intro {
+        height: 900px;
+        margin-bottom: 9.375rem;
+
+        @media all and (max-width:1024px) {
+          height: auto;
+        }
+      }
+
+      .section {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        @media all and (max-width:1024px) {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        &__item {
+          width: 50%;
+          display: flex;
+          flex-direction: row;
+
+          @media screen and (max-width:1024px) {
+            width: 100%;
+          }
+
+          &:first-of-type {
+            display: flex;
+            flex-direction: column;
+            padding-top: 15%;
+            z-index: 3;
+
+            @media all and (max-width:1024px) {
+              align-items: center;
+              margin-bottom: 100px;
+            }
+
+            h1 {
+              @include adaptiv-font(64, 32);
+              font-style: normal;
+              font-weight: 400;
+              line-height: 4rem;
+              font-family: "Hastag Free Trial", sans-serif;
+              color: $mainColor;
+              margin-bottom: 24px;
+            }
+
+            p {
+              font-family: "Apercu Mono Pro", sans-serif;
+              @include adaptiv-font(24, 16);
+              font-style: normal;
+              font-weight: 400;
+              line-height: 32px;
+              letter-spacing: -0.48px;
+              margin-bottom: 40px;
+            }
+
+            button {
+              max-width: 219px;
+              width: 100%;
+              padding: 20px 24px;
+              background: $greenColor;
+              border-radius: 8px;
+              color: #f9f9f9;
+              border: none;
+              transition: all 1s ease-in-out 0.1s;
+
+              &:hover {
+                cursor: pointer;
+                background: $mainColor;
+                transition: all 1s ease 0.1s;
+                box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.5);
+              }
+            }
+          }
+
+          &:last-of-type {
+            position: relative;
+
+            @media all and (max-width:1325px) {
+              transform: scale(0.8);
+            }
+
+            @media all and (max-width:1024px) {
+              transform: scale(1);
+            }
+
+            .big-illustration {
+              position: absolute;
+              right: -10%;
+              top: 15%;
+              z-index: 2;
+
+              @media all and (max-width:1325px) {
+                right: -30%;
+              }
+
+              @media all and (max-width:1024px) {
+                right: 0;
+                max-width: 100%;
+              }
+            }
+
+            .blob {
+              position: relative;
+              object-fit: contain;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+
+      .advantages {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+
+        &__header {
+          text-align: center;
+          color: $mainColor;
+          padding: 0 10px 3rem;
+
+          h2 {
+            font-family: "Hastag Free Trial", sans-serif;
+            // @include adaptiv-font(48,32);
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 4rem;
+            margin-bottom: 1.5rem;
+          }
+
+          p {
+            font-family: "Apercu Mono Pro", sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: -0.36px;
+            line-height: 26px;
+            margin: 0 auto;
+            width: 80%;
+            word-spacing: -5px;
+
+            @media all and (max-width:767px) {
+              width: 100%;
+            }
+          }
+        }
+
+        &__content {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          flex-wrap: wrap;
+
+          @media all and (max-width:1024px) {
+            justify-content: center;
+            gap: 21px;
+          }
+
+          .card-about {
+            flex: 0 0 32.15%;
+            height: 340px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.10);
+            background: $cardsBackground;
+            display: flex;
+            align-items: center;
+
+            @media all and (max-width:1024px) {
+              flex: 0 0 45%;
+            }
+
+            @media all and (max-width:767px) {
+              flex: 0 0 90%;
+            }
+
+            &__content {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-items: center;
+              text-align: center;
+              padding: 0 10px;
+
+              img {
+                margin-bottom: 1.5rem;
+
+                @media all and (max-width:425px) {
+                  width: 30%;
+                }
+              }
+
+              h3 {
+                font-family: "Apercu Mono Pro", sans-serif;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 32px;
+                margin-bottom: 1rem;
+              }
+
+              p {
+                font-family: "Apercu Mono Pro", sans-serif;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 26px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

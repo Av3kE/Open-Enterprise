@@ -1,0 +1,63 @@
+/* pointer-events: none; - убирает артефакты с наведением на открывающиеся объекты после убирание мыши, 
+чтоб не дергалось короче*/
+/* @media (any-hover: hover){
+    &:hover{
+
+} */
+/* для img
+max-width:100%;
+*/
+/* transition
+
+transition-duration - промежуток времени, во врмея которого будет проихсодить переход, можно указывать несколько 
+значений при комбинации с transition-property;
+
+transition-property - содержит названия цсс свойств к которым будет применен эффект перехода
+
+пример:
+
+transition-duration:1s, 2s;
+transition-property:background-color, top; - время применяется соответсвенно.
+
+!!!СВОЙСТВО display НЕ АНИМИРУЕТСЯ!!!
+
+https://fls.guru/csstransition.html (1) - transition
+
+transition-delay - изменение с задержкой
+
+пример:
+
+transition-duration:1s, 2s;
+transition-property:background-color, top;
+transition-delay: 0s, 1s; - соответственно сначала анимируется цвет заднего фона, затем - топ, через секунду
+
+transition-timing-function - вот эти ease ease-in и тд
+transition-timing-function: steps(10, start/end); разбивает время и изменение свойтсва на части, указанные в 
+первом значении, и начинает их выполнять в зависимости от второго значения. Будет дерганным, если указать маленькое
+количество шагов-степс.
+
+cubic-bezier - отделаьная шляпа, смотреть шпаргалку (1)
+
+shorthand-transition: 
+
+transition: transition-property(первое) transtion-duration transition-timing-function transition-delay,
+transition-property(второе) -||-;
+//////////////////////////////////////////////////////////////////////////
+
+https://fls.guru/cssbackground.html(2) - background
+
+Адаптивные изображения 
+
+max-width:100%; 
+object-fit  и тд.
+object-position
+
+<picture>
+source
+img
+zshbs
+
+1328+112=1440px
+
+
+*/
