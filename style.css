@@ -8,6 +8,7 @@ body {
   height: 100%;
   font-size: 16px;
   background: #f9f9f9;
+  color: #303031;
 }
 body .wrapper {
   min-height: 100%;
@@ -47,7 +48,6 @@ body .wrapper .header__logo > div img {
   height: 41px;
 }
 body .wrapper .header__logo h1 {
-  color: #303031;
   font-family: "Apercu Mono Pro", sans-serif;
   font-size: 32px;
   font-style: normal;
@@ -106,7 +106,6 @@ body .wrapper .main .section {
   body .wrapper .main .section {
     flex-direction: column;
     align-items: center;
-    text-align: center;
   }
 }
 body .wrapper .main .section__item {
@@ -117,6 +116,7 @@ body .wrapper .main .section__item {
 @media screen and (max-width: 1024px) {
   body .wrapper .main .section__item {
     width: 100%;
+    text-align: center;
   }
 }
 body .wrapper .main .section__item:first-of-type {
@@ -137,7 +137,6 @@ body .wrapper .main .section__item:first-of-type h1 {
   font-weight: 400;
   line-height: 4rem;
   font-family: "Hastag Free Trial", sans-serif;
-  color: #303031;
   margin-bottom: 24px;
 }
 body .wrapper .main .section__item:first-of-type p {
@@ -206,34 +205,11 @@ body .wrapper .main .advantages {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 10rem;
 }
 body .wrapper .main .advantages__header {
   text-align: center;
-  color: #303031;
   padding: 0 10px 3rem;
-}
-body .wrapper .main .advantages__header h2 {
-  font-family: "Hastag Free Trial", sans-serif;
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 4rem;
-  margin-bottom: 1.5rem;
-}
-body .wrapper .main .advantages__header p {
-  font-family: "Apercu Mono Pro", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: -0.36px;
-  line-height: 26px;
-  margin: 0 auto;
-  width: 80%;
-  word-spacing: -5px;
-}
-@media all and (max-width: 767px) {
-  body .wrapper .main .advantages__header p {
-    width: 100%;
-  }
 }
 body .wrapper .main .advantages__content {
   width: 100%;
@@ -295,4 +271,143 @@ body .wrapper .main .advantages__content .card-about__content p {
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
+}
+body .wrapper .main .advantages h2,
+body .wrapper .main .members h2 {
+  font-family: "Hastag Free Trial", sans-serif;
+  font-size: calc(35px + 13 * ((100vw - 320px) / 1120));
+  font-weight: 400;
+  line-height: 4rem;
+  margin-bottom: 1.5rem;
+}
+body .wrapper .main .advantages p,
+body .wrapper .main .members p {
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.36px;
+  line-height: 26px;
+  margin: 0 auto;
+  width: 80%;
+  word-spacing: -5px;
+}
+@media all and (max-width: 767px) {
+  body .wrapper .main .advantages p,
+  body .wrapper .main .members p {
+    width: 100%;
+  }
+}
+body .wrapper .main .members {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 9.375rem;
+}
+@media all and (max-width: 1024px) {
+  body .wrapper .main .members {
+    flex-direction: column;
+  }
+}
+body .wrapper .main .members__description {
+  order: 1;
+  width: 48.49%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+@media all and (max-width: 1024px) {
+  body .wrapper .main .members__description {
+    text-align: center;
+    margin-bottom: 3.125rem;
+    width: 95%;
+  }
+}
+body .wrapper .main .members__description div {
+  margin-bottom: 1.5rem;
+}
+body .wrapper .main .members__description div img {
+  max-width: 100%;
+}
+body .wrapper .main .members__description p {
+  width: 100%;
+}
+body .wrapper .main .members .info-item {
+  order: 2;
+  max-width: 36.44%;
+  width: 100%;
+  border-radius: 16px;
+  border: 4px solid #303031;
+  background: #FFF;
+  box-shadow: 16px 16px 0 #71a894;
+  margin-right: 2.5rem;
+}
+@media all and (max-width: 1024px) {
+  body .wrapper .main .members .info-item {
+    width: 70%;
+    margin: 0;
+    max-width: 100%;
+  }
+}
+@media all and (max-width: 767px) {
+  body .wrapper .main .members .info-item {
+    width: 95%;
+  }
+}
+body .wrapper .main .members .info-item__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 2.5rem;
+  height: 100%;
+}
+@media all and (max-width: 425px) {
+  body .wrapper .main .members .info-item__container {
+    padding: 2rem 1rem;
+  }
+}
+body .wrapper .main .members .info-item__container h3 {
+  font-size: 32px;
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+body .wrapper .main .members .info-item__container .info-item__content {
+  display: flex;
+  flex-direction: column;
+}
+body .wrapper .main .members .info-item__container .info-item__content .info-item__profile {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+body .wrapper .main .members .info-item__container .info-item__content .info-item__profile div {
+  margin-right: 0.9375rem;
+}
+body .wrapper .main .members .info-item__container .info-item__content .info-item__profile:last-of-type {
+  margin: 0;
+}
+body .wrapper .main .members .info-item__container .info-item__content .info-item__profile .person-name-container {
+  flex: 0 0 75%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body .wrapper .main .members .info-item__container .info-item__content .info-item__profile .person-name-container h4 {
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: -0.48px;
+}
+body .wrapper .main .members .info-item__container .info-item__content .info-item__profile .person-name-container p {
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.32px;
+  width: 100%;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */

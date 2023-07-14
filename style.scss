@@ -20,6 +20,7 @@ body {
   height: 100%;
   font-size: 16px;
   background: $backgroundColor;
+  color: $mainColor;
 
   .wrapper {
     min-height: 100%;
@@ -65,7 +66,6 @@ body {
         }
 
         h1 {
-          color: $mainColor;
           font-family: "Apercu Mono Pro", sans-serif;
           font-size: 32px;
           font-style: normal;
@@ -132,7 +132,6 @@ body {
         @media all and (max-width:1024px) {
           flex-direction: column;
           align-items: center;
-          text-align: center;
         }
 
         &__item {
@@ -142,6 +141,7 @@ body {
 
           @media screen and (max-width:1024px) {
             width: 100%;
+            text-align: center;
           }
 
           &:first-of-type {
@@ -161,7 +161,6 @@ body {
               font-weight: 400;
               line-height: 4rem;
               font-family: "Hastag Free Trial", sans-serif;
-              color: $mainColor;
               margin-bottom: 24px;
             }
 
@@ -235,36 +234,11 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 50px;
+        margin-bottom: 10rem;
 
         &__header {
           text-align: center;
-          color: $mainColor;
           padding: 0 10px 3rem;
-
-          h2 {
-            font-family: "Hastag Free Trial", sans-serif;
-            // @include adaptiv-font(48,32);
-            font-size: 48px;
-            font-weight: 400;
-            line-height: 4rem;
-            margin-bottom: 1.5rem;
-          }
-
-          p {
-            font-family: "Apercu Mono Pro", sans-serif;
-            font-size: 18px;
-            font-weight: 400;
-            letter-spacing: -0.36px;
-            line-height: 26px;
-            margin: 0 auto;
-            width: 80%;
-            word-spacing: -5px;
-
-            @media all and (max-width:767px) {
-              width: 100%;
-            }
-          }
         }
 
         &__content {
@@ -325,6 +299,156 @@ body {
                 font-size: 18px;
                 font-weight: 400;
                 line-height: 26px;
+              }
+            }
+          }
+        }
+      }
+
+      .advantages,
+      .members {
+        h2 {
+          font-family: "Hastag Free Trial", sans-serif;
+          @include adaptiv-font(48, 35);
+          font-weight: 400;
+          line-height: 4rem;
+          margin-bottom: 1.5rem;
+        }
+
+        p {
+          font-family: "Apercu Mono Pro", sans-serif;
+          font-size: 18px;
+          font-weight: 400;
+          letter-spacing: -0.36px;
+          line-height: 26px;
+          margin: 0 auto;
+          width: 80%;
+          word-spacing: -5px;
+
+          @media all and (max-width:767px) {
+            width: 100%;
+          }
+        }
+      }
+
+      .members {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 9.375rem;
+
+        @media all and (max-width:1024px) {
+          flex-direction: column;
+        }
+
+        &__description {
+          order: 1;
+          width: 48.49%;
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+
+          @media all and (max-width:1024px) {
+            text-align: center;
+            margin-bottom: 3.125rem;
+            width: 95%;
+          }
+
+          div {
+            margin-bottom: 1.5rem;
+
+            img {
+              max-width: 100%;
+            }
+          }
+
+          p {
+            width: 100%;
+          }
+        }
+
+        .info-item {
+          order: 2;
+          max-width: 36.44%;
+          width: 100%;
+          border-radius: 16px;
+          border: 4px solid $mainColor;
+          background: $cardsBackground;
+          box-shadow: 16px 16px 0 $greenColor;
+          margin-right: 2.5rem;
+
+          @media all and (max-width:1024px) {
+            width: 70%;
+            margin: 0;
+            max-width: 100%;
+          }
+
+          @media all and (max-width:767px) {
+            width: 95%;
+          }
+
+          &__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem 2.5rem;
+            height: 100%;
+
+            @media all and (max-width:425px) {
+              padding: 2rem 1rem;
+            }
+
+            h3 {
+              font-size: 32px;
+              font-family: "Apercu Mono Pro", sans-serif;
+              font-weight: 700;
+              margin-bottom: 2.5rem;
+            }
+
+            .info-item__content {
+              display: flex;
+              flex-direction: column;
+
+              .info-item__profile {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                margin-bottom: 2.5rem;
+
+                div {
+                  margin-right: 0.9375rem;
+                }
+
+                &:last-of-type {
+                  margin: 0;
+                }
+
+                .person-name-container {
+                  flex: 0 0 75%;
+                  display: flex;
+                  justify-content: space-evenly;
+                  flex-direction: column;
+                  align-items: flex-start;
+
+                  h4 {
+                    font-family: "Apercu Mono Pro", sans-serif;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 26px;
+                    letter-spacing: -0.48px;
+                  }
+
+                  p {
+                    font-family: "Apercu Mono Pro", sans-serif;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 26px;
+                    letter-spacing: -0.32px;
+                    width: 100%;
+                    margin: 0;
+                  }
+                }
               }
             }
           }
