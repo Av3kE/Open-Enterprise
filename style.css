@@ -9,6 +9,7 @@ body {
   font-size: 16px;
   background: #f9f9f9;
   color: #303031;
+  overflow-x: hidden;
 }
 body .wrapper {
   min-height: 100%;
@@ -80,13 +81,13 @@ body .wrapper .header__nav ul li .header__link {
   letter-spacing: -2px;
   word-spacing: -5px;
   color: #303031;
-  line-height: 24px;
+  line-height: 1.5rem;
   padding: 0 40px 0 0;
   text-decoration: none;
 }
 body .wrapper .main {
   flex: 1 1 auto;
-  margin: 107px 10px 0;
+  margin: 6.6875rem 0.625rem 0;
 }
 body .wrapper .main .intro {
   height: 900px;
@@ -128,7 +129,7 @@ body .wrapper .main .section__item:first-of-type {
 @media all and (max-width: 1024px) {
   body .wrapper .main .section__item:first-of-type {
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 6.25rem;
   }
 }
 body .wrapper .main .section__item:first-of-type h1 {
@@ -137,21 +138,21 @@ body .wrapper .main .section__item:first-of-type h1 {
   font-weight: 400;
   line-height: 4rem;
   font-family: "Hastag Free Trial", sans-serif;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 body .wrapper .main .section__item:first-of-type p {
   font-family: "Apercu Mono Pro", sans-serif;
   font-size: calc(16px + 8 * ((100vw - 320px) / 1120));
   font-style: normal;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 2rem;
   letter-spacing: -0.48px;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 body .wrapper .main .section__item:first-of-type button {
   max-width: 219px;
   width: 100%;
-  padding: 20px 24px;
+  padding: 1.25rem 1.5rem;
   background: #71a894;
   border-radius: 8px;
   color: #f9f9f9;
@@ -209,7 +210,7 @@ body .wrapper .main .advantages {
 }
 body .wrapper .main .advantages__header {
   text-align: center;
-  padding: 0 10px 3rem;
+  padding: 0 0.625rem 3rem;
 }
 body .wrapper .main .advantages__content {
   width: 100%;
@@ -261,19 +262,21 @@ body .wrapper .main .advantages__content .card-about__content img {
 }
 body .wrapper .main .advantages__content .card-about__content h3 {
   font-family: "Apercu Mono Pro", sans-serif;
-  font-size: 24px;
+  font-size: calc(20px + 4 * ((100vw - 320px) / 1120));
   font-weight: 700;
-  line-height: 32px;
+  line-height: 2rem;
   margin-bottom: 1rem;
 }
 body .wrapper .main .advantages__content .card-about__content p {
   font-family: "Apercu Mono Pro", sans-serif;
-  font-size: 18px;
+  font-size: calc(15px + 3 * ((100vw - 320px) / 1120));
   font-weight: 400;
-  line-height: 26px;
+  line-height: 1.625rem;
 }
 body .wrapper .main .advantages h2,
-body .wrapper .main .members h2 {
+body .wrapper .main .members h2,
+body .wrapper .main .capabilities > .section-description h2,
+body .wrapper .main .engaging-contributors > .section-description h2 {
   font-family: "Hastag Free Trial", sans-serif;
   font-size: calc(35px + 13 * ((100vw - 320px) / 1120));
   font-weight: 400;
@@ -281,23 +284,29 @@ body .wrapper .main .members h2 {
   margin-bottom: 1.5rem;
 }
 body .wrapper .main .advantages p,
-body .wrapper .main .members p {
+body .wrapper .main .members p,
+body .wrapper .main .capabilities > .section-description p,
+body .wrapper .main .engaging-contributors > .section-description p {
   font-family: "Apercu Mono Pro", sans-serif;
-  font-size: 18px;
+  font-size: calc(15px + 3 * ((100vw - 320px) / 1120));
   font-weight: 400;
   letter-spacing: -0.36px;
-  line-height: 26px;
+  line-height: 1.625rem;
   margin: 0 auto;
   width: 80%;
   word-spacing: -5px;
 }
 @media all and (max-width: 767px) {
   body .wrapper .main .advantages p,
-  body .wrapper .main .members p {
+  body .wrapper .main .members p,
+  body .wrapper .main .capabilities > .section-description p,
+  body .wrapper .main .engaging-contributors > .section-description p {
     width: 100%;
   }
 }
-body .wrapper .main .members {
+body .wrapper .main .members,
+body .wrapper .main .capabilities,
+body .wrapper .main .engaging-contributors {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -305,11 +314,15 @@ body .wrapper .main .members {
   margin-bottom: 9.375rem;
 }
 @media all and (max-width: 1024px) {
-  body .wrapper .main .members {
+  body .wrapper .main .members,
+  body .wrapper .main .capabilities,
+  body .wrapper .main .engaging-contributors {
     flex-direction: column;
   }
 }
-body .wrapper .main .members__description {
+body .wrapper .main .members .section-description,
+body .wrapper .main .capabilities .section-description,
+body .wrapper .main .engaging-contributors .section-description {
   order: 1;
   width: 48.49%;
   display: flex;
@@ -317,22 +330,35 @@ body .wrapper .main .members__description {
   text-align: left;
 }
 @media all and (max-width: 1024px) {
-  body .wrapper .main .members__description {
+  body .wrapper .main .members .section-description,
+  body .wrapper .main .capabilities .section-description,
+  body .wrapper .main .engaging-contributors .section-description {
     text-align: center;
     margin-bottom: 3.125rem;
     width: 95%;
   }
 }
-body .wrapper .main .members__description div {
+body .wrapper .main .members .section-description div,
+body .wrapper .main .capabilities .section-description div,
+body .wrapper .main .engaging-contributors .section-description div {
   margin-bottom: 1.5rem;
 }
-body .wrapper .main .members__description div img {
+body .wrapper .main .members .section-description div img,
+body .wrapper .main .capabilities .section-description div img,
+body .wrapper .main .engaging-contributors .section-description div img {
   max-width: 100%;
 }
-body .wrapper .main .members__description p {
+body .wrapper .main .members .section-description p,
+body .wrapper .main .capabilities .section-description p,
+body .wrapper .main .engaging-contributors .section-description p {
   width: 100%;
 }
-body .wrapper .main .members .info-item {
+body .wrapper .main .members .info-item,
+body .wrapper .main .members .vote-item,
+body .wrapper .main .capabilities .info-item,
+body .wrapper .main .capabilities .vote-item,
+body .wrapper .main .engaging-contributors .info-item,
+body .wrapper .main .engaging-contributors .vote-item {
   order: 2;
   max-width: 36.44%;
   width: 100%;
@@ -343,18 +369,30 @@ body .wrapper .main .members .info-item {
   margin-right: 2.5rem;
 }
 @media all and (max-width: 1024px) {
-  body .wrapper .main .members .info-item {
+  body .wrapper .main .members .info-item,
+  body .wrapper .main .members .vote-item,
+  body .wrapper .main .capabilities .info-item,
+  body .wrapper .main .capabilities .vote-item,
+  body .wrapper .main .engaging-contributors .info-item,
+  body .wrapper .main .engaging-contributors .vote-item {
     width: 70%;
     margin: 0;
     max-width: 100%;
   }
 }
 @media all and (max-width: 767px) {
-  body .wrapper .main .members .info-item {
+  body .wrapper .main .members .info-item,
+  body .wrapper .main .members .vote-item,
+  body .wrapper .main .capabilities .info-item,
+  body .wrapper .main .capabilities .vote-item,
+  body .wrapper .main .engaging-contributors .info-item,
+  body .wrapper .main .engaging-contributors .vote-item {
     width: 95%;
   }
 }
-body .wrapper .main .members .info-item__container {
+body .wrapper .main .members .info-item__container,
+body .wrapper .main .capabilities .info-item__container,
+body .wrapper .main .engaging-contributors .info-item__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -362,52 +400,480 @@ body .wrapper .main .members .info-item__container {
   height: 100%;
 }
 @media all and (max-width: 425px) {
-  body .wrapper .main .members .info-item__container {
+  body .wrapper .main .members .info-item__container,
+  body .wrapper .main .capabilities .info-item__container,
+  body .wrapper .main .engaging-contributors .info-item__container {
     padding: 2rem 1rem;
   }
 }
-body .wrapper .main .members .info-item__container h3 {
-  font-size: 32px;
+body .wrapper .main .members .info-item__container h3,
+body .wrapper .main .capabilities .info-item__container h3,
+body .wrapper .main .engaging-contributors .info-item__container h3 {
+  font-size: calc(25px + 7 * ((100vw - 320px) / 1120));
   font-family: "Apercu Mono Pro", sans-serif;
   font-weight: 700;
   margin-bottom: 2.5rem;
 }
-body .wrapper .main .members .info-item__container .info-item__content {
+body .wrapper .main .members .info-item__container .info-item__content,
+body .wrapper .main .capabilities .info-item__container .info-item__content,
+body .wrapper .main .engaging-contributors .info-item__container .info-item__content {
   display: flex;
   flex-direction: column;
 }
-body .wrapper .main .members .info-item__container .info-item__content .info-item__profile {
+body .wrapper .main .members .info-item__container .info-item__content .info-item__profile,
+body .wrapper .main .capabilities .info-item__container .info-item__content .info-item__profile,
+body .wrapper .main .engaging-contributors .info-item__container .info-item__content .info-item__profile {
   display: flex;
   width: 100%;
   justify-content: space-between;
   margin-bottom: 2.5rem;
 }
-body .wrapper .main .members .info-item__container .info-item__content .info-item__profile div {
+body .wrapper .main .members .info-item__container .info-item__content .info-item__profile div,
+body .wrapper .main .capabilities .info-item__container .info-item__content .info-item__profile div,
+body .wrapper .main .engaging-contributors .info-item__container .info-item__content .info-item__profile div {
   margin-right: 0.9375rem;
 }
-body .wrapper .main .members .info-item__container .info-item__content .info-item__profile:last-of-type {
+body .wrapper .main .members .info-item__container .info-item__content .info-item__profile:last-of-type,
+body .wrapper .main .capabilities .info-item__container .info-item__content .info-item__profile:last-of-type,
+body .wrapper .main .engaging-contributors .info-item__container .info-item__content .info-item__profile:last-of-type {
   margin: 0;
 }
-body .wrapper .main .members .info-item__container .info-item__content .info-item__profile .person-name-container {
+body .wrapper .main .members .info-item__container .info-item__content .info-item__profile .person-name-container,
+body .wrapper .main .capabilities .info-item__container .info-item__content .info-item__profile .person-name-container,
+body .wrapper .main .engaging-contributors .info-item__container .info-item__content .info-item__profile .person-name-container {
   flex: 0 0 75%;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   align-items: flex-start;
 }
-body .wrapper .main .members .info-item__container .info-item__content .info-item__profile .person-name-container h4 {
+body .wrapper .main .members .info-item__container .info-item__content .info-item__profile .person-name-container h4,
+body .wrapper .main .capabilities .info-item__container .info-item__content .info-item__profile .person-name-container h4,
+body .wrapper .main .engaging-contributors .info-item__container .info-item__content .info-item__profile .person-name-container h4 {
   font-family: "Apercu Mono Pro", sans-serif;
-  font-size: 24px;
+  font-size: calc(18px + 6 * ((100vw - 320px) / 1120));
   font-weight: 600;
-  line-height: 26px;
+  line-height: 1.625rem;
   letter-spacing: -0.48px;
 }
-body .wrapper .main .members .info-item__container .info-item__content .info-item__profile .person-name-container p {
+body .wrapper .main .members .info-item__container .info-item__content .info-item__profile .person-name-container p,
+body .wrapper .main .capabilities .info-item__container .info-item__content .info-item__profile .person-name-container p,
+body .wrapper .main .engaging-contributors .info-item__container .info-item__content .info-item__profile .person-name-container p {
   font-family: "Apercu Mono Pro", sans-serif;
-  font-size: 16px;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1120));
   font-weight: 500;
-  line-height: 26px;
+  line-height: 1.625rem;
   letter-spacing: -0.32px;
   width: 100%;
   margin: 0;
+}
+body .wrapper .main .capabilities .section-description {
+  order: 2;
+}
+body .wrapper .main .capabilities .vote-item {
+  order: 1;
+  margin: 0;
+  box-shadow: none;
+}
+@media all and (max-width: 1024px) {
+  body .wrapper .main .capabilities .vote-item {
+    margin-bottom: 3.125rem;
+  }
+}
+body .wrapper .main .capabilities .vote-item__container {
+  padding: 2.25rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+@media all and (max-width: 430px) {
+  body .wrapper .main .capabilities .vote-item__container {
+    padding: 1.5rem;
+  }
+}
+body .wrapper .main .capabilities .vote-item__container .vote-item__profile {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1.75rem;
+}
+body .wrapper .main .capabilities .vote-item__container .vote-item__profile img {
+  margin-right: 0.9375rem;
+}
+body .wrapper .main .capabilities .vote-item__container .vote-item__profile .vote-person-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: -moz-max-content;
+  width: max-content;
+}
+body .wrapper .main .capabilities .vote-item__container .vote-item__profile .vote-person-container h3 {
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: calc(18px + 6 * ((100vw - 320px) / 1120));
+  font-weight: 700;
+  line-height: 2rem;
+  letter-spacing: -0.48px;
+}
+body .wrapper .main .capabilities .vote-item__container .vote-item__profile .vote-person-container p {
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: calc(13px + 3 * ((100vw - 320px) / 1120));
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: -0.32px;
+}
+body .wrapper .main .capabilities .vote-item__container .vote-item__message {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+body .wrapper .main .capabilities .vote-item__container .vote-item__message p {
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: -0.32px;
+}
+body .wrapper .main .capabilities .vote-item__container .person-data {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+body .wrapper .main .capabilities .vote-item__container .person-data__item {
+  flex: 1 0 49%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 4.25rem;
+  padding: 0 1%;
+}
+body .wrapper .main .capabilities .vote-item__container .person-data__item h5 {
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1120));
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: -0.32px;
+}
+body .wrapper .main .capabilities .vote-item__container .person-data__item h4 {
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: calc(17px + 7 * ((100vw - 320px) / 1120));
+  font-weight: 500;
+  line-height: 2rem;
+  letter-spacing: -0.48px;
+}
+body .wrapper .main .capabilities .vote-item__container button {
+  background: #303031;
+  color: #FFF;
+  border: none;
+  border-radius: 16px;
+  padding: 0.75rem 1.5rem;
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2rem;
+  letter-spacing: -0.48px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.5s ease-out 0.1s;
+}
+body .wrapper .main .capabilities .vote-item__container button:hover {
+  background: #71a894;
+  transition: all 0.5s ease-out 0.1s;
+}
+body .wrapper .main .engaging-contributors .section-description {
+  order: 1;
+  align-self: center;
+}
+body .wrapper .main .engaging-contributors .applicants {
+  order: 2;
+  max-width: 48.49%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body .wrapper .main .engaging-contributors .applicants__header {
+  border-radius: 16px;
+  border: 4px solid #303031;
+  font-family: "Apercu Mono Pro", sans-serif;
+  width: 87%;
+  margin: 0 auto;
+  position: relative;
+  padding: 1.5rem;
+  background: #FFF;
+  margin-bottom: 1.5rem;
+}
+body .wrapper .main .engaging-contributors .applicants__header .bg-green {
+  position: absolute;
+  width: 98%;
+  bottom: -8%;
+  background: #71a894;
+  z-index: -1;
+  height: 100%;
+  left: 1%;
+  border-radius: 16px;
+}
+body .wrapper .main .engaging-contributors .applicants__header h4 {
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.5rem;
+  letter-spacing: -0.36px;
+  margin-bottom: 1rem;
+}
+body .wrapper .main .engaging-contributors .applicants__header p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: -0.32px;
+}
+body .wrapper .main .engaging-contributors .applicants__header button {
+  border-radius: 40px;
+  background: #71a894;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  transition: all 0.2s ease-in 0.1s;
+  padding: 4px 8px;
+  border: none;
+  color: #FFF;
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: -0.32px;
+}
+body .wrapper .main .engaging-contributors .applicants__header button:hover {
+  background: #303031;
+  transition: all 0.2s ease-out 0.1s;
+}
+body .wrapper .main .engaging-contributors .applicants__body {
+  width: 100%;
+  padding: 0 5px;
+  display: flex;
+  flex-direction: row;
+}
+body .wrapper .main .engaging-contributors .applicants__body .rating-applicants {
+  width: 59.161491%;
+  height: 288px;
+  background: #F3F0EA;
+  border: 4px solid #303031;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  margin-right: 0.75rem;
+}
+body .wrapper .main .engaging-contributors .applicants__body .rating-applicants h4 {
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 2rem;
+  letter-spacing: -0.48px;
+  margin-bottom: 1.5rem;
+}
+body .wrapper .main .engaging-contributors .applicants__body .rating-applicants__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .wrapper .main .engaging-contributors .applicants__body .rating-applicants__content .rating-applicants__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 301px;
+  margin-bottom: 1.5rem;
+}
+body .wrapper .main .engaging-contributors .applicants__body .rating-applicants__content .rating-applicants__item:last-of-type {
+  margin: 0;
+}
+body .wrapper .main .engaging-contributors .applicants__body .rating-applicants__content .rating-applicants__item img {
+  margin-right: 1rem;
+}
+body .wrapper .main .engaging-contributors .applicants__body .rating-applicants__content .rating-applicants__item .rating-applicants__name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+body .wrapper .main .engaging-contributors .applicants__body .rating-applicants__content .rating-applicants__item .rating-applicants__name h5 {
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: -1.4px;
+}
+body .wrapper .main .engaging-contributors .applicants__body .rating-applicants__content .rating-applicants__item .rating-applicants__name div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 68px;
+}
+body .wrapper .main .engaging-contributors .applicants__body .rating-applicants__content .rating-applicants__item .rating-applicants__name div p {
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+body .wrapper .main .engaging-contributors .applicants__body .rating-applicants__content .rating-applicants__item .rating-applicants__name div i {
+  color: #F5C64F;
+}
+body .wrapper .main .engaging-contributors .applicants__body .person-card {
+  width: 37.26%;
+  min-height: 288px;
+  border: 4px solid #71a894;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+  font-family: "Apercu Mono Pro", sans-serif;
+}
+body .wrapper .main .engaging-contributors .applicants__body .person-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: -0.4px;
+}
+body .wrapper .main .engaging-contributors .applicants__body .person-card p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: -0.32px;
+}
+body .wrapper .main .engaging-contributors .applicants__body .person-card__rating {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+}
+body .wrapper .main .engaging-contributors .applicants__body .person-card__rating p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: -0.32px;
+}
+body .wrapper .main .engaging-contributors .applicants__body .person-card__rating p:last-of-type {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: -0.4px;
+}
+body .wrapper .main .engaging-contributors .applicants__body .person-card__rating i {
+  color: #F5C64F;
+}
+body .wrapper .main .engaging-contributors .applicants__body .person-card button {
+  width: 80%;
+  padding: 0.75rem 1.5rem;
+  min-height: 44px;
+  background: #303031;
+  transition: all 1s ease-in-out 0.1s;
+  border: none;
+  border-radius: 16px;
+  color: #f9f9f9;
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25rem;
+  letter-spacing: -0.32px;
+}
+body .wrapper .main .engaging-contributors .applicants__body .person-card button:hover {
+  transition: all 1s ease-in 0.1s;
+}
+body .wrapper .main .improving-open-enterprise {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+body .wrapper .main .improving-open-enterprise__title {
+  font-family: "Hastag Free Trial", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 4rem;
+  margin-bottom: 1.5rem;
+}
+body .wrapper .main .improving-open-enterprise__subtitle {
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.625rem;
+  letter-spacing: -0.36px;
+  margin-bottom: 3rem;
+  width: 80%;
+}
+body .wrapper .main .improving-open-enterprise__content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+body .wrapper .main .improving-open-enterprise__content .improving-open-enterprise__card {
+  flex: 0 1 32.15%;
+  font-family: "Apercu Mono Pro", sans-serif;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #FFF;
+  border-radius: 16px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  min-height: 244px;
+}
+body .wrapper .main .improving-open-enterprise__content .improving-open-enterprise__card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: -0.36px;
+}
+body .wrapper .main .improving-open-enterprise__content .improving-open-enterprise__card p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: -0.32px;
+}
+body .wrapper .main .improving-open-enterprise__content .improving-open-enterprise__card div {
+  width: 100%;
+}
+body .wrapper .main .improving-open-enterprise__content .improving-open-enterprise__card div button {
+  background: #71a894;
+  height: 32px;
+  float: left;
+  border: none;
+  color: #FFF;
+  border-radius: 40px;
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: -0.32px;
+}
+body .wrapper .main .improving-open-enterprise__content .improving-open-enterprise__card div p {
+  text-align: right;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: -0.32px;
+}
+body .wrapper .main .improving-open-enterprise__button {
+  width: 10.24%;
+  padding: 1.25rem 1.5rem;
+  background: #303031;
+  border: none;
+  border-radius: 8px;
+  color: #FFF;
+  transition: all 0.2s ease-in 0.1s;
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: -1.9px;
+}
+body .wrapper .main .improving-open-enterprise__button:hover {
+  background: #71a894;
+  transition: all 0.2s ease-out 0.1s;
 }/*# sourceMappingURL=style.css.map */
