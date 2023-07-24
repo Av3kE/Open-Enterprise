@@ -276,7 +276,8 @@ body .wrapper .main .advantages__content .card-about__content p {
 body .wrapper .main .advantages h2,
 body .wrapper .main .members h2,
 body .wrapper .main .capabilities > .section-description h2,
-body .wrapper .main .engaging-contributors > .section-description h2 {
+body .wrapper .main .engaging-contributors > .section-description h2,
+body .wrapper .main .request-beta > .section-description h2 {
   font-family: "Hastag Free Trial", sans-serif;
   font-size: calc(35px + 13 * ((100vw - 320px) / 1120));
   font-weight: 400;
@@ -286,7 +287,8 @@ body .wrapper .main .engaging-contributors > .section-description h2 {
 body .wrapper .main .advantages p,
 body .wrapper .main .members p,
 body .wrapper .main .capabilities > .section-description p,
-body .wrapper .main .engaging-contributors > .section-description p {
+body .wrapper .main .engaging-contributors > .section-description p,
+body .wrapper .main .request-beta > .section-description p {
   font-family: "Apercu Mono Pro", sans-serif;
   font-size: calc(15px + 3 * ((100vw - 320px) / 1120));
   font-weight: 400;
@@ -300,13 +302,15 @@ body .wrapper .main .engaging-contributors > .section-description p {
   body .wrapper .main .advantages p,
   body .wrapper .main .members p,
   body .wrapper .main .capabilities > .section-description p,
-  body .wrapper .main .engaging-contributors > .section-description p {
+  body .wrapper .main .engaging-contributors > .section-description p,
+  body .wrapper .main .request-beta > .section-description p {
     width: 100%;
   }
 }
 body .wrapper .main .members,
 body .wrapper .main .capabilities,
-body .wrapper .main .engaging-contributors {
+body .wrapper .main .engaging-contributors,
+body .wrapper .main .request-beta {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -316,13 +320,16 @@ body .wrapper .main .engaging-contributors {
 @media all and (max-width: 1024px) {
   body .wrapper .main .members,
   body .wrapper .main .capabilities,
-  body .wrapper .main .engaging-contributors {
+  body .wrapper .main .engaging-contributors,
+  body .wrapper .main .request-beta {
     flex-direction: column;
+    align-items: center;
   }
 }
 body .wrapper .main .members .section-description,
 body .wrapper .main .capabilities .section-description,
-body .wrapper .main .engaging-contributors .section-description {
+body .wrapper .main .engaging-contributors .section-description,
+body .wrapper .main .request-beta .section-description {
   order: 1;
   width: 48.49%;
   display: flex;
@@ -332,7 +339,8 @@ body .wrapper .main .engaging-contributors .section-description {
 @media all and (max-width: 1024px) {
   body .wrapper .main .members .section-description,
   body .wrapper .main .capabilities .section-description,
-  body .wrapper .main .engaging-contributors .section-description {
+  body .wrapper .main .engaging-contributors .section-description,
+  body .wrapper .main .request-beta .section-description {
     text-align: center;
     margin-bottom: 3.125rem;
     width: 95%;
@@ -340,17 +348,20 @@ body .wrapper .main .engaging-contributors .section-description {
 }
 body .wrapper .main .members .section-description div,
 body .wrapper .main .capabilities .section-description div,
-body .wrapper .main .engaging-contributors .section-description div {
+body .wrapper .main .engaging-contributors .section-description div,
+body .wrapper .main .request-beta .section-description div {
   margin-bottom: 1.5rem;
 }
 body .wrapper .main .members .section-description div img,
 body .wrapper .main .capabilities .section-description div img,
-body .wrapper .main .engaging-contributors .section-description div img {
+body .wrapper .main .engaging-contributors .section-description div img,
+body .wrapper .main .request-beta .section-description div img {
   max-width: 100%;
 }
 body .wrapper .main .members .section-description p,
 body .wrapper .main .capabilities .section-description p,
-body .wrapper .main .engaging-contributors .section-description p {
+body .wrapper .main .engaging-contributors .section-description p,
+body .wrapper .main .request-beta .section-description p {
   width: 100%;
 }
 body .wrapper .main .members .info-item,
@@ -358,7 +369,9 @@ body .wrapper .main .members .vote-item,
 body .wrapper .main .capabilities .info-item,
 body .wrapper .main .capabilities .vote-item,
 body .wrapper .main .engaging-contributors .info-item,
-body .wrapper .main .engaging-contributors .vote-item {
+body .wrapper .main .engaging-contributors .vote-item,
+body .wrapper .main .request-beta .info-item,
+body .wrapper .main .request-beta .vote-item {
   order: 2;
   max-width: 36.44%;
   width: 100%;
@@ -374,7 +387,9 @@ body .wrapper .main .engaging-contributors .vote-item {
   body .wrapper .main .capabilities .info-item,
   body .wrapper .main .capabilities .vote-item,
   body .wrapper .main .engaging-contributors .info-item,
-  body .wrapper .main .engaging-contributors .vote-item {
+  body .wrapper .main .engaging-contributors .vote-item,
+  body .wrapper .main .request-beta .info-item,
+  body .wrapper .main .request-beta .vote-item {
     width: 70%;
     margin: 0;
     max-width: 100%;
@@ -386,13 +401,16 @@ body .wrapper .main .engaging-contributors .vote-item {
   body .wrapper .main .capabilities .info-item,
   body .wrapper .main .capabilities .vote-item,
   body .wrapper .main .engaging-contributors .info-item,
-  body .wrapper .main .engaging-contributors .vote-item {
+  body .wrapper .main .engaging-contributors .vote-item,
+  body .wrapper .main .request-beta .info-item,
+  body .wrapper .main .request-beta .vote-item {
     width: 95%;
   }
 }
 body .wrapper .main .members .info-item__container,
 body .wrapper .main .capabilities .info-item__container,
-body .wrapper .main .engaging-contributors .info-item__container {
+body .wrapper .main .engaging-contributors .info-item__container,
+body .wrapper .main .request-beta .info-item__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -402,13 +420,15 @@ body .wrapper .main .engaging-contributors .info-item__container {
 @media all and (max-width: 425px) {
   body .wrapper .main .members .info-item__container,
   body .wrapper .main .capabilities .info-item__container,
-  body .wrapper .main .engaging-contributors .info-item__container {
+  body .wrapper .main .engaging-contributors .info-item__container,
+  body .wrapper .main .request-beta .info-item__container {
     padding: 2rem 1rem;
   }
 }
 body .wrapper .main .members .info-item__container h3,
 body .wrapper .main .capabilities .info-item__container h3,
-body .wrapper .main .engaging-contributors .info-item__container h3 {
+body .wrapper .main .engaging-contributors .info-item__container h3,
+body .wrapper .main .request-beta .info-item__container h3 {
   font-size: calc(25px + 7 * ((100vw - 320px) / 1120));
   font-family: "Apercu Mono Pro", sans-serif;
   font-weight: 700;
@@ -416,13 +436,15 @@ body .wrapper .main .engaging-contributors .info-item__container h3 {
 }
 body .wrapper .main .members .info-item__container .info-item__content,
 body .wrapper .main .capabilities .info-item__container .info-item__content,
-body .wrapper .main .engaging-contributors .info-item__container .info-item__content {
+body .wrapper .main .engaging-contributors .info-item__container .info-item__content,
+body .wrapper .main .request-beta .info-item__container .info-item__content {
   display: flex;
   flex-direction: column;
 }
 body .wrapper .main .members .info-item__container .info-item__content .info-item__profile,
 body .wrapper .main .capabilities .info-item__container .info-item__content .info-item__profile,
-body .wrapper .main .engaging-contributors .info-item__container .info-item__content .info-item__profile {
+body .wrapper .main .engaging-contributors .info-item__container .info-item__content .info-item__profile,
+body .wrapper .main .request-beta .info-item__container .info-item__content .info-item__profile {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -430,17 +452,20 @@ body .wrapper .main .engaging-contributors .info-item__container .info-item__con
 }
 body .wrapper .main .members .info-item__container .info-item__content .info-item__profile div,
 body .wrapper .main .capabilities .info-item__container .info-item__content .info-item__profile div,
-body .wrapper .main .engaging-contributors .info-item__container .info-item__content .info-item__profile div {
+body .wrapper .main .engaging-contributors .info-item__container .info-item__content .info-item__profile div,
+body .wrapper .main .request-beta .info-item__container .info-item__content .info-item__profile div {
   margin-right: 0.9375rem;
 }
 body .wrapper .main .members .info-item__container .info-item__content .info-item__profile:last-of-type,
 body .wrapper .main .capabilities .info-item__container .info-item__content .info-item__profile:last-of-type,
-body .wrapper .main .engaging-contributors .info-item__container .info-item__content .info-item__profile:last-of-type {
+body .wrapper .main .engaging-contributors .info-item__container .info-item__content .info-item__profile:last-of-type,
+body .wrapper .main .request-beta .info-item__container .info-item__content .info-item__profile:last-of-type {
   margin: 0;
 }
 body .wrapper .main .members .info-item__container .info-item__content .info-item__profile .person-name-container,
 body .wrapper .main .capabilities .info-item__container .info-item__content .info-item__profile .person-name-container,
-body .wrapper .main .engaging-contributors .info-item__container .info-item__content .info-item__profile .person-name-container {
+body .wrapper .main .engaging-contributors .info-item__container .info-item__content .info-item__profile .person-name-container,
+body .wrapper .main .request-beta .info-item__container .info-item__content .info-item__profile .person-name-container {
   flex: 0 0 75%;
   display: flex;
   justify-content: space-evenly;
@@ -449,7 +474,8 @@ body .wrapper .main .engaging-contributors .info-item__container .info-item__con
 }
 body .wrapper .main .members .info-item__container .info-item__content .info-item__profile .person-name-container h4,
 body .wrapper .main .capabilities .info-item__container .info-item__content .info-item__profile .person-name-container h4,
-body .wrapper .main .engaging-contributors .info-item__container .info-item__content .info-item__profile .person-name-container h4 {
+body .wrapper .main .engaging-contributors .info-item__container .info-item__content .info-item__profile .person-name-container h4,
+body .wrapper .main .request-beta .info-item__container .info-item__content .info-item__profile .person-name-container h4 {
   font-family: "Apercu Mono Pro", sans-serif;
   font-size: calc(18px + 6 * ((100vw - 320px) / 1120));
   font-weight: 600;
@@ -458,7 +484,8 @@ body .wrapper .main .engaging-contributors .info-item__container .info-item__con
 }
 body .wrapper .main .members .info-item__container .info-item__content .info-item__profile .person-name-container p,
 body .wrapper .main .capabilities .info-item__container .info-item__content .info-item__profile .person-name-container p,
-body .wrapper .main .engaging-contributors .info-item__container .info-item__content .info-item__profile .person-name-container p {
+body .wrapper .main .engaging-contributors .info-item__container .info-item__content .info-item__profile .person-name-container p,
+body .wrapper .main .request-beta .info-item__container .info-item__content .info-item__profile .person-name-container p {
   font-family: "Apercu Mono Pro", sans-serif;
   font-size: calc(14px + 2 * ((100vw - 320px) / 1120));
   font-weight: 500;
@@ -593,6 +620,11 @@ body .wrapper .main .engaging-contributors .applicants {
   display: flex;
   flex-direction: column;
 }
+@media all and (max-width: 1024px) {
+  body .wrapper .main .engaging-contributors .applicants {
+    max-width: 100%;
+  }
+}
 body .wrapper .main .engaging-contributors .applicants__header {
   border-radius: 16px;
   border: 4px solid #303031;
@@ -603,6 +635,11 @@ body .wrapper .main .engaging-contributors .applicants__header {
   padding: 1.5rem;
   background: #FFF;
   margin-bottom: 1.5rem;
+}
+@media all and (max-width: 1366px) {
+  body .wrapper .main .engaging-contributors .applicants__header {
+    display: none;
+  }
 }
 body .wrapper .main .engaging-contributors .applicants__header .bg-green {
   position: absolute;
@@ -653,14 +690,35 @@ body .wrapper .main .engaging-contributors .applicants__body {
   display: flex;
   flex-direction: row;
 }
+@media all and (max-width: 1366px) {
+  body .wrapper .main .engaging-contributors .applicants__body {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media all and (min-width: 768px) {
+  body .wrapper .main .engaging-contributors .applicants__body {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
 body .wrapper .main .engaging-contributors .applicants__body .rating-applicants {
-  width: 59.161491%;
   height: 288px;
   background: #F3F0EA;
   border: 4px solid #303031;
   border-radius: 16px;
   padding: 2rem 2.5rem;
   margin-right: 0.75rem;
+}
+@media all and (max-width: 1024px) {
+  body .wrapper .main .engaging-contributors .applicants__body .rating-applicants {
+    margin-right: 0;
+  }
+}
+@media all and (max-width: 425px) {
+  body .wrapper .main .engaging-contributors .applicants__body .rating-applicants {
+    padding: 1rem;
+  }
 }
 body .wrapper .main .engaging-contributors .applicants__body .rating-applicants h4 {
   font-family: "Apercu Mono Pro", sans-serif;
@@ -679,7 +737,6 @@ body .wrapper .main .engaging-contributors .applicants__body .rating-applicants_
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 301px;
   margin-bottom: 1.5rem;
 }
 body .wrapper .main .engaging-contributors .applicants__body .rating-applicants__content .rating-applicants__item:last-of-type {
@@ -718,7 +775,7 @@ body .wrapper .main .engaging-contributors .applicants__body .rating-applicants_
   color: #F5C64F;
 }
 body .wrapper .main .engaging-contributors .applicants__body .person-card {
-  width: 37.26%;
+  min-width: 37.26%;
   min-height: 288px;
   border: 4px solid #71a894;
   border-radius: 16px;
@@ -728,6 +785,16 @@ body .wrapper .main .engaging-contributors .applicants__body .person-card {
   justify-content: space-evenly;
   margin-top: 3rem;
   font-family: "Apercu Mono Pro", sans-serif;
+}
+@media all and (max-width: 1366px) {
+  body .wrapper .main .engaging-contributors .applicants__body .person-card {
+    min-width: 35%;
+  }
+}
+@media all and (max-width: 768px) {
+  body .wrapper .main .engaging-contributors .applicants__body .person-card {
+    width: 72%;
+  }
 }
 body .wrapper .main .engaging-contributors .applicants__body .person-card h3 {
   font-size: 20px;
@@ -754,13 +821,20 @@ body .wrapper .main .engaging-contributors .applicants__body .person-card__ratin
   line-height: 1.5rem;
   letter-spacing: -0.32px;
 }
-body .wrapper .main .engaging-contributors .applicants__body .person-card__rating p:last-of-type {
+body .wrapper .main .engaging-contributors .applicants__body .person-card__rating div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 68px;
+}
+body .wrapper .main .engaging-contributors .applicants__body .person-card__rating div p {
   font-size: 20px;
   font-weight: 500;
   line-height: 1.5rem;
   letter-spacing: -0.4px;
 }
-body .wrapper .main .engaging-contributors .applicants__body .person-card__rating i {
+body .wrapper .main .engaging-contributors .applicants__body .person-card__rating div i {
   color: #F5C64F;
 }
 body .wrapper .main .engaging-contributors .applicants__body .person-card button {
@@ -768,18 +842,20 @@ body .wrapper .main .engaging-contributors .applicants__body .person-card button
   padding: 0.75rem 1.5rem;
   min-height: 44px;
   background: #303031;
-  transition: all 1s ease-in-out 0.1s;
+  transition: all 0.5s ease-in-out 0.2s;
   border: none;
   border-radius: 16px;
   color: #f9f9f9;
   font-family: "Apercu Mono Pro", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 1.25rem;
   letter-spacing: -0.32px;
+  cursor: pointer;
 }
 body .wrapper .main .engaging-contributors .applicants__body .person-card button:hover {
-  transition: all 1s ease-in 0.1s;
+  transition: all 0.3s ease-in 0.2s;
+  background: #71a894;
 }
 body .wrapper .main .improving-open-enterprise {
   width: 100%;
@@ -787,6 +863,7 @@ body .wrapper .main .improving-open-enterprise {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-bottom: 2.75rem;
 }
 body .wrapper .main .improving-open-enterprise__title {
   font-family: "Hastag Free Trial", sans-serif;
@@ -812,8 +889,14 @@ body .wrapper .main .improving-open-enterprise__content {
   margin-bottom: 3rem;
   text-align: left;
 }
+@media all and (max-width: 1024px) {
+  body .wrapper .main .improving-open-enterprise__content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 body .wrapper .main .improving-open-enterprise__content .improving-open-enterprise__card {
-  flex: 0 1 32.15%;
+  width: 32.15%;
   font-family: "Apercu Mono Pro", sans-serif;
   padding: 1.5rem;
   display: flex;
@@ -824,17 +907,35 @@ body .wrapper .main .improving-open-enterprise__content .improving-open-enterpri
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
   min-height: 244px;
 }
+@media all and (max-width: 1024px) {
+  body .wrapper .main .improving-open-enterprise__content .improving-open-enterprise__card {
+    width: 50%;
+    margin-bottom: 3.125rem;
+  }
+}
+@media all and (max-width: 587px) {
+  body .wrapper .main .improving-open-enterprise__content .improving-open-enterprise__card {
+    width: 75%;
+  }
+}
+@media all and (max-width: 425px) {
+  body .wrapper .main .improving-open-enterprise__content .improving-open-enterprise__card {
+    width: 95%;
+  }
+}
 body .wrapper .main .improving-open-enterprise__content .improving-open-enterprise__card h4 {
   font-size: 18px;
   font-weight: 700;
   line-height: 1.5rem;
   letter-spacing: -0.36px;
+  margin-bottom: 15px;
 }
 body .wrapper .main .improving-open-enterprise__content .improving-open-enterprise__card p {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5rem;
   letter-spacing: -0.32px;
+  margin-bottom: 15px;
 }
 body .wrapper .main .improving-open-enterprise__content .improving-open-enterprise__card div {
   width: 100%;
@@ -858,9 +959,9 @@ body .wrapper .main .improving-open-enterprise__content .improving-open-enterpri
   font-weight: 600;
   line-height: 1.5rem;
   letter-spacing: -0.32px;
+  margin-bottom: 0;
 }
 body .wrapper .main .improving-open-enterprise__button {
-  width: 10.24%;
   padding: 1.25rem 1.5rem;
   background: #303031;
   border: none;
@@ -876,4 +977,50 @@ body .wrapper .main .improving-open-enterprise__button {
 body .wrapper .main .improving-open-enterprise__button:hover {
   background: #71a894;
   transition: all 0.2s ease-out 0.1s;
+}
+body .wrapper .main .divider {
+  width: 100%;
+  position: relative;
+  height: 72px;
+  margin-bottom: 2.75rem;
+  overflow: hidden;
+}
+body .wrapper .main .divider img {
+  position: absolute;
+  left: -5%;
+}
+body .wrapper .main .request-beta .section-description {
+  order: 1;
+  width: 49.235474%;
+}
+@media all and (max-width: 1024px) {
+  body .wrapper .main .request-beta .section-description {
+    align-items: center;
+  }
+}
+body .wrapper .main .request-beta .section-description p {
+  margin-bottom: 2.5rem;
+}
+body .wrapper .main .request-beta .section-description button {
+  border: none;
+  padding: 20px 24px;
+  border-radius: 8px;
+  transition: all 0.4s ease-in 0.5s;
+  background: #71a894;
+  color: #FFF;
+  width: 43%;
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+body .wrapper .main .request-beta .section-description button:hover {
+  background: #303031;
+  transition: all 0.4s ease-in 0.5s;
+}
+body .wrapper .main .request-beta__item {
+  order: 2;
+}
+body .wrapper .main .request-beta__item img {
+  max-width: 100%;
 }/*# sourceMappingURL=style.css.map */
